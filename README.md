@@ -12,13 +12,14 @@ Dosen Pengampu: Salnan Ratih Asriningtias, ST., MT.
 | T1B | Kelompok 4 | Aplikasi Kasir Café (Console TypeScript) |
 
 Link Repository Public: https://github.com/alghifarii17/UASPemdas
+
 ## Anggota dan Akun GitHub
 
 | No | Nama Lengkap | NIM | Akun GitHub |
 |----|--------------|-----|-------------|
-| 1 | Mochavy Amadeo Alghifari | 263140700111054 | @[alghifarii17] |
-| 2 | [Nama Lengkap Najwan] | [NIM Najwan] | @[username_github_najwan] |
-| 3 | [Nama Lengkap Yudhistira] | [NIM Yudhistira] | @[username_github_yudhistira] |
+| 1 | Mochavy Amadeo Alghifari (Alghi) | 263140700111054 | @alghifarii17 |
+| 2 | Najwan Azhim Muntazhar (najwan) | 263140700111042 | @NajwanAzhimM |
+| 3 | Yudhistira Prasetyo Aji Padantyo | 263140700111050 | @[username_github_yudhistira] |
 
 ## Tabel Pembagian Tugas dan Kontribusi
 
