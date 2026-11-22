@@ -1,1 +1,2 @@
-console.log("alghi")
+console.log("alghi");
+console.log("najwan")
