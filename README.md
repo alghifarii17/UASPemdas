@@ -9,15 +9,14 @@ Dosen Pengampu: Salnan Ratih Asriningtias, ST., MT.
 
 | Kelas | Kelompok | Judul / Tema |
 |-------|----------|--------------|
-| T1B | Kelompok-[NN] | Aplikasi Kasir Café (Console TypeScript) |
+| T1B | Kelompok 4 | Aplikasi Kasir Café (Console TypeScript) |
 
-Link Repository Public: https://github.com/[username-pemilik]/[nama-repo]
-
+Link Repository Public: https://github.com/alghifarii17/UASPemdas
 ## Anggota dan Akun GitHub
 
 | No | Nama Lengkap | NIM | Akun GitHub |
 |----|--------------|-----|-------------|
-| 1 | Mochavy Amadeo Alghifari (Alghi) | 263140700111054 | @[username_github_alghi] |
+| 1 | Mochavy Amadeo Alghifari | 263140700111054 | @[alghifarii17] |
 | 2 | [Nama Lengkap Najwan] | [NIM Najwan] | @[username_github_najwan] |
 | 3 | [Nama Lengkap Yudhistira] | [NIM Yudhistira] | @[username_github_yudhistira] |
 
