@@ -55,28 +55,7 @@ Setiap anggota juga me-review Pull Request anggota lain. Tabel ini diperbarui pa
 | 6 | Cari menu (Search) | Kata kunci tidak sensitif huruf besar/kecil + filter kategori, harga, status |
 | 7 | Transaksi kasir | Diskon member, pajak, struk, stok berkurang |
 
-## Cara Instal dan Menjalankan
 
-Prasyarat: Node.js 18 atau lebih baru.
 
-```bash
-npm install
-npx ts-node src/index.ts
-```
 
-## Struktur Proyek
 
-```
-.
-├── src/
-│   └── index.ts
-├── docs/            (draft laporan .docx)
-├── package.json
-├── tsconfig.json
-├── .gitignore       (mengabaikan node_modules)
-└── README.md
-```
-
-## Alur Git
-
-Branch `main` (selalu bisa dijalankan), `develop` (integrasi), dan `feature/<nama-fitur>`. Fitur digabung ke `develop` lewat Pull Request yang di-review minimal satu anggota lain; `develop` digabung ke `main` pada setiap batas progress. Format commit: `tipe: deskripsi singkat` (contoh: `feat: tambah fitur hapus data`).
