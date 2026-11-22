@@ -1,92 +1,130 @@
 # Kasir Café (Console TypeScript)
 
-# Kasir Cafe (Aplikasi Console TypeScript)
+# Aplikasi Kasir Café (CLI)
 
-Proyek Tim UAS Pemrograman Dasar
-Program Studi Teknologi Informasi, Fakultas Vokasi, Universitas Brawijaya
-Dosen Pengampu: Salnan Ratih Asriningtias, ST., MT.
+*Kelas / Kelompok:* T1B / Kelompok-4
+*Link Repository:* https://github.com/alghifarii17/UASPemdas
+*Mata Kuliah:* Pemrograman Dasar  
+*Tahun Akademik:* 2026/2027  
 
-## 1. Identitas Tim
+---
 
-Kelas: T1B | Kelompok: (isi nomor kelompok)
+## A. Daftar Anggota & Pembagian Tugas
 
-| No | Nama Lengkap | NIM | Akun GitHub |
-| --- | --- | --- | --- |
-| 1 | Mochavy Amadeo Alghifari (Algi) | 263140700111054 | @(isi username) |
-| 2 | Najwan Azhim Muntazhar | 263140700111042 | @(isi username) |
-| 3 | Yuditira (isi nama lengkap) | (isi NIM) | @(isi username) |
+| No. | Nama Anggota | NIM | Akun GitHub | Tugas dan Tanggung Jawab |
+|---|---|---|---|---|
+| 1 | Mochavy Amadeo Alghifari  | `263140700111054` | `@alghifarii17` | Bertanggung jawab dalam setup repository (`.gitignore`, `tsconfig.json`, `package.json`), struktur data `Menu` dan seed, fungsi input/validasi, menu utama (loop), serta pengembangan fitur **Create**. Laporan: Sampul, 1.1 Deskripsi Masalah, 3.1 Pemetaan Ketentuan. Branch: `feature/setup-menu-utama`, `feature/create-data`. PR: [isi tautan PR] |
+| 2 | Najwan Azhim M | `263140700111042` | `@NajwanAzhimM` | Bertanggung jawab dalam pengembangan fitur **Read** (semua data dan detail by ID), fitur **Update**, dan fungsi tampilan tabel. Laporan: 1.2 Decomposition, 1.3 Pattern Recognition, Bab II Flowchart. Branch: `feature/read-data`, `feature/update-data`. PR: [isi tautan PR] |
+| 3 | Yudhistira Prasetyo Aji Padantyo | `263140700111050` | `@yudhistira2207-collab` | Bertanggung jawab dalam pengembangan fitur **Delete** (konfirmasi Y/N), fitur **Search** (kata kunci + filter), dan fitur **Transaksi Kasir**. Laporan: 1.4 Abstraction, 1.5 Algorithmic Thinking, 3.2 dan 3.3. Branch: `feature/delete-data`, `feature/search-data`, `feature/transaksi`. PR: [isi tautan PR] |
 
-Repository (Public): https://github.com/(username-pemilik)/(nama-repository)
+Setiap anggota juga me-review Pull Request anggota lain. Tabel ini diperbarui pada setiap progress.
 
-## 2. Deskripsi Aplikasi
+---
 
-**Kasir Cafe** adalah aplikasi berbasis terminal (console) yang dibangun dengan TypeScript untuk membantu kasir cafe mengelola daftar menu sekaligus menghitung pesanan pelanggan. Aplikasi ini merupakan pengembangan dari proyek UTS "Kasir Cafe", yang sebelumnya hanya menghitung satu transaksi dengan menu tetap. Pada UAS, menu menjadi data yang dapat dikelola (CRUD dan pencarian), lalu dipakai oleh fitur kasir.
+## B. Proposal & Analisis Awal
 
-**Latar belakang masalah.** Pencatatan menu, harga, dan stok yang dilakukan manual mudah salah dan lambat dicari. Perhitungan total, diskon member, dan pajak juga rawan salah hitung. Aplikasi ini mengotomatiskan keduanya.
+### 1. Tema & Deskripsi Masalah
+* **Tema:** Aplikasi Kasir & Manajemen Menu Café Berbasis Console (TypeScript).
+* **Deskripsi Masalah:** Café membutuhkan aplikasi berbasis teks (*command-line*) yang praktis untuk mengelola data menu secara terstruktur (**Create, Read, Update, Delete, Search**) sekaligus memproses transaksi kasir, meliputi diskon member, pajak 10%, pencetakan struk, dan pengurangan stok otomatis. Data disimpan di memori menggunakan *array of object*.
 
-**Pengguna.** Kasir atau petugas cafe.
+### 2. Identifikasi Entitas & Properti Data
+**Entitas Utama: `Menu`**
+* `id`: `number` — ID unik, dibuat otomatis
+* `nama`: `string` — Nama menu
+* `kategori`: `string` — Kategori menu
+* `harga`: `number` — Harga menu
+* `stok`: `number` — Jumlah stok (berkurang saat transaksi)
+* `status`: `string` — Status ketersediaan menu
 
-**Entitas data `MenuItem`:**
+> Catatan: properti di atas disusun dari fitur yang tercantum; sesuaikan dengan `interface Menu` di `src/index.ts`.
 
-| Properti | Tipe | Keterangan |
-| --- | --- | --- |
-| id | string | Kode unik menu (contoh: M001) |
-| nama | string | Nama menu |
-| kategori | string | Minuman / Makanan / Lainnya |
-| harga | number | Harga satuan (rupiah) |
-| stok | number | Jumlah stok |
-| tersedia | boolean | Status apakah menu bisa dijual |
+### 3. Daftar Fitur Utama (CRUD + Search + Transaksi) & Decomposition Awal
+1. **Create (Tambah Menu):**
+   * Menerima input data menu dengan validasi, membuat ID unik otomatis, lalu menyimpan ke array.
+2. **Read (Lihat Semua Menu & Detail by ID):**
+   * Menampilkan seluruh menu dalam tabel rapi, dengan pesan jika data kosong.
+   * Menampilkan detail menu berdasarkan ID, dengan pesan jika ID tidak ditemukan.
+3. **Update (Ubah Menu):**
+   * Menampilkan nilai lama, kasir dapat menekan Enter untuk melewati kolom yang tidak diubah.
+4. **Delete (Hapus Menu):**
+   * Menghapus menu berdasarkan ID disertai konfirmasi Y/N.
+5. **Search (Cari Menu):**
+   * Pencarian kata kunci tidak sensitif huruf besar/kecil, dengan filter **kategori**, **harga**, dan **status**.
+6. **Transaksi Kasir:**
+   * Menghitung total dengan diskon member dan pajak 10%, mencetak struk, serta mengurangi stok.
 
-**Fitur yang direncanakan:**
+---
 
-| Menu | Fitur | Keterangan |
-| --- | --- | --- |
-| 1 | Tambah menu (Create) | ID unik otomatis, validasi input |
-| 2 | Lihat semua menu (Read) | Tabel rapi, pesan khusus jika data kosong |
-| 3 | Detail menu berdasarkan ID (Read) | Pesan jika ID tidak ditemukan |
-| 4 | Ubah menu (Update) | Menampilkan nilai lama, kolom boleh dilewati |
-| 5 | Hapus menu (Delete) | Konfirmasi Y/N |
-| 6 | Cari menu (Search) | Kata kunci (tidak sensitif huruf besar/kecil) + filter kategori / rentang harga / status |
-| 7 | Kasir (hitung pesanan) | Subtotal, diskon member, pajak 10%, kembalian, stok berkurang otomatis |
-| 0 | Keluar | Menu berulang sampai pengguna memilih keluar |
+## C. Rencana Pengembangan Project
+Pengembangan project dilakukan melalui beberapa tahapan:
+1. Persiapan repository public dan konfigurasi awal TypeScript (`.gitignore`, `tsconfig.json`, `package.json`, `src/index.ts`).
+2. Penyusunan proposal, analisis permasalahan, serta draft awal laporan di folder `docs/`.
+3. Perancangan struktur data `Menu` dan alur logika program (*decomposition*, flowchart).
+4. Implementasi fitur CRUD + Search + Transaksi Kasir.
+5. Integrasi, pengujian, dan evaluasi program pada seluruh skenario input dan validasi.
+6. Penyusunan dokumentasi akhir dan laporan UAS.
 
-Data disimpan di memori menggunakan array, dengan 6 data awal (seed).
+**Alur Git:** Branch `main` (selalu bisa dijalankan), `develop` (integrasi), dan `feature/<nama-fitur>`. Fitur digabung ke `develop` lewat Pull Request yang di-review minimal satu anggota lain; `develop` digabung ke `main` pada setiap batas progress. Format commit: `tipe: deskripsi singkat` (contoh: `feat: tambah fitur hapus data`).
 
-## 3. Pembagian Tugas Anggota
+---
 
-Seluruh kode berada di satu file `src/index.ts` yang dibagi menjadi blok sesuai pembagian di bawah, agar kerja paralel tidak bentrok (merge conflict). Setiap anggota menulis kode di branch `feature/<nama-fitur>` miliknya sendiri dan membuat Pull Request atas namanya sendiri.
+## D. Progress Pengerjaan
 
-| Anggota | Bagian Kode di `src/index.ts` | Branch | Tugas Laporan dan Dokumentasi |
-| --- | --- | --- | --- |
-| 1. Algi | Bagian 1: setup, tipe data `MenuItem`, seed data, fungsi bantu input (`tanya`, `bacaTeks`, `bacaAngka`, `bacaYaTidak`). Bagian 5: menu utama berulang dan `main()` | `feature/setup-menu-utama` | Repository dan README, Bab I (1.1 Deskripsi Masalah, 1.2 Decomposition) |
-| 2. Najwan | Bagian 2: Create (`tambahMenu`) dan Read (`tampilSemuaMenu`, `tampilDetailMenu`). Bagian 4: fitur Kasir (`hitungPesanan`, `hitungDiskon`, `hitungPajak`) | `feature/create-read`, `feature/kasir` | Bab II (flowchart dan keterangan alur), Bab I (1.5 Algorithmic Thinking untuk Create, Read, dan Kasir) |
-| 3. Yuditira | Bagian 3: Update (`ubahMenu`) dan Delete (`hapusMenu`). Bagian 4: Search (`cariMenu`) | `feature/update-delete`, `feature/search` | Bab I (1.3 Pattern Recognition, 1.4 Abstraction, 1.5 untuk Update, Delete, Search), Bab III (3.3 Screenshot) |
+### Progress 1 — 23 Nov 2026
+- [ ] **Alghi:** Buat repo Public, setup proyek, README.
+- [ ] **Najwan:** 1.2 Decomposition awal.
+- [ ] **Yudhistira:** 1.1 Deskripsi Masalah awal.
 
-Pembagian di atas adalah usulan awal. Ubah sesuai kesepakatan tim, lalu perbarui tabel ini pada setiap progress.
+### Progress 2 — 27 Nov 2026
+- [ ] **Alghi:** Struktur data, fondasi materi UTS, kerangka menu.
+- [ ] **Najwan:** Flowchart, 1.3 Pattern Recognition.
+- [ ] **Yudhistira:** 1.4 Abstraction, 1.5 menu utama.
 
-## 4. Alur Kerja Git
+### Progress 3 — 30 Nov 2026
+- [ ] **Alghi:** Fitur Create + validasi.
+- [ ] **Najwan:** Laporan algoritma Create.
+- [ ] **Yudhistira:** Review PR.
 
-- Branch: `main` (selalu bisa dijalankan), `develop` (integrasi), `feature/<nama-fitur>` (satu branch per fitur).
-- Setiap fitur digabung ke `develop` lewat Pull Request yang di-review minimal satu anggota lain.
-- `develop` digabung ke `main` pada setiap batas waktu progress.
-- Format commit: `tipe: deskripsi singkat`, contoh `feat: tambah fitur hapus data`, `fix: perbaiki validasi harga`, `docs: update README`.
-- Setiap anggota memakai akun GitHub sendiri dan membuat minimal satu commit bermakna per progress.
+### Progress 4 — 2 Des 2026
+- [ ] **Alghi:** Review PR.
+- [ ] **Najwan:** Fitur Read.
+- [ ] **Yudhistira:** Laporan algoritma Read.
 
-## 5. Teknologi dan Cara Menjalankan
+### Progress 5 — 4 Des 2026
+- [ ] **Alghi:** Review PR.
+- [ ] **Najwan:** Fitur Update.
+- [ ] **Yudhistira:** Fitur Delete.
 
-Teknologi: TypeScript, Node.js, ts-node.
+### Progress 6 — 7 Des 2026
+- [ ] **Alghi:** Integrasi dan pengecekan syarat materi.
+- [ ] **Najwan:** Review PR.
+- [ ] **Yudhistira:** Fitur Search.
+
+### Progress 7 — 11 Des 2026
+- [ ] **Alghi:** Finalisasi kode dan README.
+- [ ] **Najwan:** Finalisasi flowchart dan laporan.
+- [ ] **Yudhistira:** Fitur Transaksi, screenshot, laporan final.
+
+---
+
+## E. Cara Instal dan Menjalankan
+
+Prasyarat: Node.js 18 atau lebih baru.
 
 ```bash
 npm install
 npx ts-node src/index.ts
 ```
 
-## 6. Tabel Kontribusi
+## F. Struktur Proyek
 
-Diisi dan diperbarui pada setiap progress.
-
-| Nama | NIM | Akun GitHub | Fitur / Bagian Kode | Pull Request Utama |
-| --- | --- | --- | --- | --- |
-| Mochavy Amadeo Alghifari | 263140700111054 | @(isi) | (sesuai tabel pembagian tugas) | (isi tautan PR) |
-| Najwan Azhim Muntazhar | 263140700111042 | @(isi) | (sesuai tabel pembagian tugas) | (isi tautan PR) |
-| Yuditira | (isi NIM) | @(isi) | (sesuai tabel pembagian tugas) | (isi tautan PR) |
+```
+.
+├── src/
+│   └── index.ts
+├── docs/            (draft laporan .docx)
+├── package.json
+├── tsconfig.json
+├── .gitignore       (mengabaikan node_modules)
+└── README.md
+```
