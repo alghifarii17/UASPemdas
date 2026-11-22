@@ -107,24 +107,3 @@ Pengembangan project dilakukan melalui beberapa tahapan:
 
 ---
 
-## E. Cara Instal dan Menjalankan
-
-Prasyarat: Node.js 18 atau lebih baru.
-
-```bash
-npm install
-npx ts-node src/index.ts
-```
-
-## F. Struktur Proyek
-
-```
-.
-├── src/
-│   └── index.ts
-├── docs/            (draft laporan .docx)
-├── package.json
-├── tsconfig.json
-├── .gitignore       (mengabaikan node_modules)
-└── README.md
-```
