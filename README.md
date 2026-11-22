@@ -4,7 +4,6 @@
 
 **Kelas / Kelompok:** T1B / Kelompok-4 
 **Link Repository:** https://github.com/alghifarii17/UASPemdas
-
 **Mata Kuliah:** Pemrograman Dasar  
 **Dosen Pengampu:** Salnan Ratih Asriningtias, ST., MT.  
 **Program Studi:** Teknologi Informasi, Fakultas Vokasi, Universitas Brawijaya  
@@ -16,7 +15,7 @@
 
 | No. | Nama Anggota | NIM | Akun GitHub | Tugas dan Tanggung Jawab |
 |---|---|---|---|---|
-| 1 | Mochavy Amadeo Alghifari (Alghi) | `263140700111054` | `@[alghifarii17` | Bertanggung jawab dalam setup repository (`.gitignore`, `tsconfig.json`, `package.json`), struktur data `Menu` dan seed, fungsi input/validasi, menu utama (loop), serta pengembangan fitur **Create**. Laporan: Sampul, 1.1 Deskripsi Masalah, 3.1 Pemetaan Ketentuan. Branch: `feature/setup-menu-utama`, `feature/create-data`. PR: [isi tautan PR] |
+| 1 | Mochavy Amadeo Alghifari (Alghi) | `263140700111054` | `@alghifarii17` | Bertanggung jawab dalam setup repository (`.gitignore`, `tsconfig.json`, `package.json`), struktur data `Menu` dan seed, fungsi input/validasi, menu utama (loop), serta pengembangan fitur **Create**. Laporan: Sampul, 1.1 Deskripsi Masalah, 3.1 Pemetaan Ketentuan. Branch: `feature/setup-menu-utama`, `feature/create-data`. PR: [isi tautan PR] |
 | 2 | Najwan Azhim M | `263140700111042` | `@NajwanAzhimM` | Bertanggung jawab dalam pengembangan fitur **Read** (semua data dan detail by ID), fitur **Update**, dan fungsi tampilan tabel. Laporan: 1.2 Decomposition, 1.3 Pattern Recognition, Bab II Flowchart. Branch: `feature/read-data`, `feature/update-data`. PR: [isi tautan PR] |
 | 3 | Yudhistira Prasetyo Aji Padantyo | `263140700111050` | `@yudhistira2207-collab` | Bertanggung jawab dalam pengembangan fitur **Delete** (konfirmasi Y/N), fitur **Search** (kata kunci + filter), dan fitur **Transaksi Kasir**. Laporan: 1.4 Abstraction, 1.5 Algorithmic Thinking, 3.2 dan 3.3. Branch: `feature/delete-data`, `feature/search-data`, `feature/transaksi`. PR: [isi tautan PR] |
 
