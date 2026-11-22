@@ -17,9 +17,9 @@ Link Repository Public: https://github.com/[username-pemilik]/[nama-repo]
 
 | No | Nama Lengkap | NIM | Akun GitHub |
 |----|--------------|-----|-------------|
-| 1 | Mochavy Amadeo Alghifari (Alghi) | 263140700111054 | @[username_github_alghi] |
-| 2 | [Nama Lengkap Najwan] | [NIM Najwan] | @[username_github_najwan] |
-| 3 | [Nama Lengkap Yudhistira] | [NIM Yudhistira] | @[username_github_yudhistira] |
+| 1 | Mochavy Amadeo Alghifari (Alghi) | 263140700111054 | @alghifarii17 |
+| 2 | Najwan Azhim Muntazhar (najwan) | 263140700111042 | @NajwanAzhimM |
+| 3 | Yudhistira Prasetyo Aji Padantyo | 263140700111050 | @[username_github_yudhistira] |
 
 ## Tabel Pembagian Tugas dan Kontribusi
 
