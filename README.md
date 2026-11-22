@@ -9,8 +9,7 @@ Dosen Pengampu: Salnan Ratih Asriningtias, ST., MT.
 
 | Kelas | Kelompok | Judul / Tema |
 |-------|----------|--------------|
-| T1B | Kelompok-4
- | Aplikasi Kasir Café (Console TypeScript) |
+| T1B | Kelompok-[4] | Aplikasi Kasir Café (Console TypeScript) |
 
 Link Repository Public: https://github.com/[username-pemilik]/[nama-repo]
 
