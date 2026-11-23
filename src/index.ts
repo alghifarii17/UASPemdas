@@ -8,3 +8,5 @@ console.log("alghi");
 console.log("najwan")
 console.log("Yudhist")
 //p
+
+console. log("yudhis coba")
