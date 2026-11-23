@@ -75,6 +75,8 @@ Pengembangan project dilakukan melalui beberapa tahapan:
 - [ ] **Alghi:** Buat repo Public, setup proyek, 1.1 Deskripsi Masalah awal, 3.2 Tabel Kontribusi Anggota Tim
 - [ ] **Najwan:** README, 3.2 Tabel Kontribusi Anggota Tim
 - [ ] **Yudhistira:** 1.2 Decomposition awal, 3.2 Tabel Kontribusi Anggota Tim
+- [ ] **Laporan Bagian A:**  https://docs.google.com/document/d/1ZSiANPVnZ-gwTdt_7nFMwkVfFWXIWJ5dIw8u6_Key00/edit?usp=sharing
+
 
 ### Progress 2 — 27 Nov 2026
 - [ ] **Alghi:** Struktur data, fondasi materi UTS, kerangka menu.
