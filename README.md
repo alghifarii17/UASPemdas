@@ -71,9 +71,9 @@ Pengembangan project dilakukan melalui beberapa tahapan:
 ## D. Progress Pengerjaan
 
 ### Progress 1 — 23 Nov 2026
-- [ ] **Alghi:** Buat repo Public, setup proyek, README.
-- [ ] **Najwan:** 1.2 Decomposition awal.
-- [ ] **Yudhistira:** 1.1 Deskripsi Masalah awal.
+- [ ] **Alghi:** Buat repo Public, setup proyek, 1.1 Deskripsi Masalah awal, 3.2 Tabel Kontribusi Anggota Tim
+- [ ] **Najwan:** README, 3.2 Tabel Kontribusi Anggota Tim
+- [ ] **Yudhistira:** 1.2 Decomposition awal, 3.2 Tabel Kontribusi Anggota Tim
 
 ### Progress 2 — 27 Nov 2026
 - [ ] **Alghi:** Struktur data, fondasi materi UTS, kerangka menu.
