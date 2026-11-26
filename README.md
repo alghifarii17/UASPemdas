@@ -13,9 +13,9 @@
 
 | No. | Nama Anggota | NIM | Akun GitHub | Tugas dan Tanggung Jawab |
 |---|---|---|---|---|
-| 1 | Mochavy Amadeo Alghifari  | `263140700111054` | `@alghifarii17` | Bertanggung jawab dalam setup repository (`.gitignore`, `tsconfig.json`, `package.json`), struktur data `Menu` dan seed, fungsi input/validasi, menu utama (loop), serta pengembangan fitur **Create**. Laporan: Sampul, 1.1 Deskripsi Masalah, 3.1 Pemetaan Ketentuan. Branch: `feature/setup-menu-utama`, `feature/create-data`. PR: [isi tautan PR] |
-| 2 | Najwan Azhim M | `263140700111042` | `@NajwanAzhimM` | Bertanggung jawab dalam pengembangan fitur **Read** (semua data dan detail by ID), fitur **Update**, dan fungsi tampilan tabel. Laporan: 1.2 Decomposition, 1.3 Pattern Recognition, Bab II Flowchart. Branch: `feature/read-data`, `feature/update-data`. PR: [isi tautan PR] |
-| 3 | Yudhistira Prasetyo Aji Padantyo | `263140700111050` | `@yudhistira2207-collab` | Bertanggung jawab dalam pengembangan fitur **Delete** (konfirmasi Y/N), fitur **Search** (kata kunci + filter), dan fitur **Transaksi Kasir**. Laporan: 1.4 Abstraction, 1.5 Algorithmic Thinking, 3.2 dan 3.3. Branch: `feature/delete-data`, `feature/search-data`, `feature/transaksi`. PR: [isi tautan PR] |
+| 1 | Mochavy Amadeo Alghifari  | `263140700111054` | `@alghifarii17` | Bertanggung jawab dalam setup repository (`.gitignore`, `tsconfig.json`, `package.json`), struktur data `Menu` dan seed, fungsi input/validasi, menu utama (loop), serta pengembangan fitur **Create**. Laporan: Sampul, 1.1 Deskripsi Masalah, 3.1 Pemetaan Ketentuan. Branch: `feature/setup-menu-utama`, `feature/create-data`. 
+| 2 | Najwan Azhim M | `263140700111042` | `@NajwanAzhimM` | Bertanggung jawab dalam pengembangan readme, pengembangan fitur **Read** (semua data dan detail by ID), fitur **Update**, dan fungsi tampilan tabel. Laporan: 1.3 Pattern Recognition, Bab II Flowchart. Branch: `feature/read-data`, `feature/update-data`. 
+| 3 | Yudhistira Prasetyo Aji Padantyo | `263140700111050` | `@yudhistira2207-collab` | Bertanggung jawab dalam pengembangan fitur **Delete** (konfirmasi Y/N), fitur **Search** (kata kunci + filter), dan fitur **Transaksi Kasir**. Laporan:1.2 Decomposition, 1.4 Abstraction, 1.5 Algorithmic Thinking, 3.2 dan 3.3. Branch: `feature/delete-data`, `feature/search-data`, `feature/transaksi`. 
 
 Setiap anggota juga me-review Pull Request anggota lain. Tabel ini diperbarui pada setiap progress.
 
@@ -71,9 +71,12 @@ Pengembangan project dilakukan melalui beberapa tahapan:
 ## D. Progress Pengerjaan
 
 ### Progress 1 — 23 Nov 2026
-- [ ] **Alghi:** Buat repo Public, setup proyek, README.
-- [ ] **Najwan:** 1.2 Decomposition awal.
-- [ ] **Yudhistira:** 1.1 Deskripsi Masalah awal.
+<<<<<<< HEAD
+- [ ] **Alghi:** Buat repo Public, setup proyek, 1.1 Deskripsi Masalah awal, 3.2 Tabel Kontribusi Anggota Tim
+- [ ] **Najwan:** README, 3.2 Tabel Kontribusi Anggota Tim
+- [ ] **Yudhistira:** 1.2 Decomposition awal, 3.2 Tabel Kontribusi Anggota Tim
+- [ ] **Laporan Bagian A:**  https://docs.google.com/document/d/1ZSiANPVnZ-gwTdt_7nFMwkVfFWXIWJ5dIw8u6_Key00/edit?usp=sharing
+
 
 ### Progress 2 — 27 Nov 2026
 - [ ] **Alghi:** Struktur data, fondasi materi UTS, kerangka menu.
