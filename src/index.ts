@@ -62,6 +62,25 @@ function formatRupiah(angka: number): string {
     return "Rp" + angka.toLocaleString("id-ID");
 }
 
+// Fungsi: mencari posisi (indeks) menu berdasarkan ID, hasil -1 jika tidak ketemu
+function cariIndeksById(id: string): number {
+    // findIndex mencari elemen pertama yang ID-nya sama (huruf besar/kecil diabaikan)
+    return daftarMenu.findIndex((menu) => menu.id === id.toUpperCase());
+}
+
+// Fungsi: membuat ID baru yang dijamin belum dipakai (pencegahan duplikasi ID)
+function buatIdBaru(): string {
+    let idBaru: string = ""; // menampung ID yang akan dibuat
+    let ulangi: boolean = true; // penanda apakah pembuatan ID perlu diulang
+    // WHILE : terus membuat ID sampai ketemu yang belum ada di daftar
+    while (ulangi) {
+        nomorUrut += 1; // compound: nomor urut naik 1
+        idBaru = "M" + String(nomorUrut).padStart(3, "0"); // contoh: M007
+        ulangi = cariIndeksById(idBaru) !== -1; // ulangi jika ID ternyata sudah ada
+    }
+    return idBaru; // mengembalikan ID unik
+}
+
 function tampilkanMenuUtama(): void {
     console.log("\n==============================");
     console.log("        KASIR CAFE");
