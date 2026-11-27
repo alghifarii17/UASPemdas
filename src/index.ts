@@ -136,6 +136,30 @@ async function bacaAngka(
     return hasil; // mengembalikan angka valid
 }
 
+// Fungsi: membaca jawaban Y/N. Jika nilaiLama bukan null, Enter kosong = nilai lama
+async function bacaYaTidak(pertanyaan: string, nilaiLama: boolean | null = null): Promise<boolean> {
+    let hasil: boolean = false; // menampung jawaban (true = ya)
+    let valid: boolean = false; // penanda apakah jawaban sudah valid
+    // WHILE : ulangi sampai user menjawab y atau n
+    while (!valid) {
+        const masukan: string = (await tanya(pertanyaan)).toLowerCase(); // jawaban huruf kecil
+        // IF 5 : Enter kosong memakai nilai lama (jika ada)
+        if (masukan === "" && nilaiLama !== null) {
+            hasil = nilaiLama; // memakai nilai lama sebagai hasil
+            valid = true; // menandai input sudah valid
+        } else if (masukan === "y") {
+            hasil = true; // jawaban ya
+            valid = true;
+        } else if (masukan === "n") {
+            hasil = false; // jawaban tidak
+            valid = true;
+        } else {
+            console.log("Jawab dengan y (ya) atau n (tidak)."); // jawaban lain ditolak
+        }
+    }
+    return hasil; // mengembalikan jawaban
+}
+
 function tampilkanMenuUtama(): void {
     console.log("\n==============================");
     console.log("        KASIR CAFE");
