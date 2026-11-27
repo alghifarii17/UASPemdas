@@ -160,6 +160,47 @@ async function bacaYaTidak(pertanyaan: string, nilaiLama: boolean | null = null)
     return hasil; // mengembalikan jawaban
 }
 
+// Fungsi: mengubah kode kategori (1-3) menjadi nama kategori
+function ambilNamaKategori(kode: number): string {
+    let nama: string = ""; // menampung nama kategori hasil pilihan
+    // SWITCH 1 : memilih nama kategori sesuai kode yang dipilih user
+    switch (kode) {
+        case 1:
+            nama = "Minuman"; // kode 1 = Minuman
+            break; // keluar dari switch
+        case 2:
+            nama = "Makanan"; // kode 2 = Makanan
+            break; // keluar dari switch
+        case 3:
+            nama = "Lainnya"; // kode 3 = Lainnya
+            break; // keluar dari switch
+        default:
+            nama = "Lainnya"; // kode di luar 1-3 dianggap Lainnya
+            break; // keluar dari switch
+    }
+    return nama; // mengembalikan nama kategori
+}
+
+// Fungsi: membaca pilihan kategori (1-3) dan mengembalikan nama kategorinya
+async function bacaKategori(nilaiLama: string = ""): Promise<string> {
+    console.log("Kategori: 1. Minuman  2. Makanan  3. Lainnya"); // menampilkan pilihan
+    // meminta kode 1-3; Enter kosong dipakai saat Update untuk mempertahankan kategori lama
+    const kode: number = await bacaAngka(
+        "Pilih kategori (1-3)" + (nilaiLama !== "" ? " [Enter = " + nilaiLama + "]" : "") + ": ", // teks pertanyaan (disertai petunjuk Enter saat Update)
+        1, // nilai kode minimal adalah 1
+        nilaiLama !== "" ? 0 : null // 0 berarti Enter kosong diperbolehkan (Update)
+    );
+    // IF 6 : kode 0 berarti user menekan Enter (pakai kategori lama)
+    if (kode === 0) {
+        return nilaiLama; // mengembalikan kategori lama
+    }
+    // IF 7 : kode di atas 3 tidak ada pilihannya, dianggap kategori Lainnya
+    if (kode > 3) {
+        console.log("Kode di atas 3 dianggap kategori Lainnya."); // memberi tahu bahwa kode di atas 3 dianggap Lainnya
+    }
+    return ambilNamaKategori(kode); // mengubah kode menjadi nama kategori
+}
+
 function tampilkanMenuUtama(): void {
     console.log("\n==============================");
     console.log("        KASIR CAFE");
