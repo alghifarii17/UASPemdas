@@ -104,6 +104,38 @@ async function bacaTeks(pertanyaan: string, nilaiLama: string = ""): Promise<str
     return hasil; // mengembalikan teks valid
 }
 
+// Fungsi: membaca angka bulat >= nilaiMin. Jika nilaiLama bukan null, Enter kosong
+// berarti memakai nilai lama (dipakai saat Update)
+async function bacaAngka(
+    pertanyaan: string, // teks pertanyaan yang ditampilkan
+    nilaiMin: number, // nilai terkecil yang diizinkan
+    nilaiLama: number | null = null // nilai lama (null bila bukan sedang Update)
+): Promise<number> {
+    let hasil: number = 0; // menampung angka yang valid
+    let valid: boolean = false; // penanda apakah input sudah valid
+    // WHILE : ulangi pertanyaan sampai user memasukkan angka yang benar
+    while (!valid) {
+        const masukan: string = await tanya(pertanyaan); // membaca jawaban user
+        // IF 3 : Enter kosong saat Update berarti memakai nilai lama
+        if (masukan === "" && nilaiLama !== null) {
+            return nilaiLama; // keluar dari fungsi dengan nilai lama
+        }
+        const angka: number = Number(masukan); // mengubah teks menjadi angka
+        // IF 4 (rantai if/else if) : memeriksa angka tidak valid satu per satu
+        if (masukan === "" || isNaN(angka)) {
+            console.log("Input harus berupa angka."); // bukan angka / NaN
+        } else if (angka < nilaiMin) {
+            console.log("Nilai minimal adalah " + nilaiMin + "."); // terlalu kecil / negatif
+        } else if (angka % 1 !== 0) {
+            console.log("Input harus bilangan bulat (tanpa koma)."); // ada pecahan
+        } else {
+            hasil = angka; // angka sudah benar
+            valid = true;
+        }
+    }
+    return hasil; // mengembalikan angka valid
+}
+
 function tampilkanMenuUtama(): void {
     console.log("\n==============================");
     console.log("        KASIR CAFE");
