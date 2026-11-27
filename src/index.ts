@@ -81,6 +81,29 @@ function buatIdBaru(): string {
     return idBaru; // mengembalikan ID unik
 }
 
+// Fungsi: membaca teks wajib isi (tidak boleh kosong). Jika nilaiLama diisi,
+// menekan Enter tanpa mengetik berarti "pakai nilai lama" (dipakai saat Update)
+async function bacaTeks(pertanyaan: string, nilaiLama: string = ""): Promise<string> {
+    let hasil: string = ""; // menampung teks yang valid
+    let valid: boolean = false; // penanda apakah input sudah valid
+    // DO...WHILE : minta input minimal sekali, ulangi sampai valid
+    do {
+        const masukan: string = await tanya(pertanyaan); // membaca jawaban user
+        // IF 1 : Enter kosong saat Update berarti memakai nilai lama
+        if (masukan === "" && nilaiLama !== "") {
+            hasil = nilaiLama; // memakai nilai lama sebagai hasil
+            valid = true; // menandai input sudah valid
+        } else if (masukan === "" || masukan.length > MAKS_NAMA) {
+            // IF 2 (majemuk, operator ||) : tolak teks kosong atau terlalu panjang
+            console.log("Input tidak boleh kosong dan maksimal " + MAKS_NAMA + " karakter.");
+        } else {
+            hasil = masukan; // input sudah benar
+            valid = true;
+        }
+    } while (!valid); // operator logika ! : ulangi selama belum valid
+    return hasil; // mengembalikan teks valid
+}
+
 function tampilkanMenuUtama(): void {
     console.log("\n==============================");
     console.log("        KASIR CAFE");
