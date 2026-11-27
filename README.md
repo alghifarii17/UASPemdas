@@ -13,8 +13,8 @@
 
 | No. | Nama Anggota | NIM | Akun GitHub | Tugas dan Tanggung Jawab |
 |---|---|---|---|---|
-| 1 | Mochavy Amadeo Alghifari  | `263140700111054` | `@alghifarii17` | Bertanggung jawab dalam setup repository (`.gitignore`, `tsconfig.json`, `package.json`), struktur data `Menu` dan seed, fungsi input/validasi, menu utama (loop), serta pengembangan fitur **Create**. Laporan: Sampul, 1.1 Deskripsi Masalah, 1.5 Algorithmic Thinking, 3.1 Pemetaan Ketentuan, 3.2  Tabel Kontribusi Anggota Tim (Bukti GitHub). Branch: `feature/validasi-v2`, `feature/create-data`. 
-| 2 | Najwan Azhim M | `263140700111042` | `@NajwanAzhimM` | Bertanggung jawab dalam pengembangan readme, pengembangan fitur **Read** (semua data dan detail by ID), fitur **Update**, dan fungsi tampilan tabel. Laporan: , Bab II Flowchart, 3.2  Tabel Kontribusi Anggota Tim (Bukti GitHub). Branch: `fondasi-dan-menu-utama`, `feature/update-data`. 
+| 1 | Mochavy Amadeo Alghifari  | `263140700111054` | `@alghifarii17` | Bertanggung jawab dalam setup repository (`.gitignore`, `tsconfig.json`, `package.json`), struktur data `Menu` dan seed, fungsi input/validasi, menu utama (loop), feature/validasi-v2, serta pengembangan fitur **Create**. Laporan: Sampul, 1.1 Deskripsi Masalah, 1.5 Algorithmic Thinking, 3.1 Pemetaan Ketentuan, 3.2  Tabel Kontribusi Anggota Tim (Bukti GitHub). Branch: `feature/validasi-v2`, `feature/create-data`. 
+| 2 | Najwan Azhim M | `263140700111042` | `@NajwanAzhimM` | Bertanggung jawab dalam pengembangan readme, pengembangan fitur **Read** (semua data dan detail by ID), fitur **Update**, fondasi-dan-menu-utama, dan fungsi tampilan tabel. Laporan: , Bab II Flowchart, 3.2  Tabel Kontribusi Anggota Tim (Bukti GitHub). Branch: `fondasi-dan-menu-utama`, `feature/update-data`. 
 | 3 | Yudhistira Prasetyo Aji Padantyo | `263140700111050` | `@yudhistira2207-collab` | Bertanggung jawab dalam pengembangan fitur **Delete** (konfirmasi Y/N), fitur **Search** (kata kunci + filter), dan fitur **Transaksi Kasir**. Laporan: 1.2 Decomposition 1.3 Pattern Recognition, 1.4 Abstraction, 3.2  Tabel Kontribusi Anggota Tim (Bukti GitHub) dan 3.3  Screenshot Hasil Pengujian Program. Branch: `feature/kasir`, `feature/search-data`, `feature/transaksi`.
 
 Setiap anggota juga me-review Pull Request anggota lain. Tabel ini diperbarui pada setiap progress.
@@ -79,9 +79,9 @@ Pengembangan project dilakukan melalui beberapa tahapan:
 
 
 ### Progress 2 — 27 Nov 2026
-- [ ] **Alghi:** Struktur data, fondasi materi UTS, kerangka menu, 1.5 menu utama.
-- [ ] **Najwan:** 2.1 Flowchart Alur Menu Utama, 2.2 Keterangan Alur Flowchart
-- [ ] **Yudhistira:**  1.3 Pattern Recognition, 1.4 Abstraction, 
+- [ ] **Alghi:** Struktur data, fondasi materi UTS, kerangka menu, 1.5 menu utama, feature/validasi-v2.
+- [ ] **Najwan:** 2.1 Flowchart Alur Menu Utama, 2.2 Keterangan Alur Flowchart, Fondasi Dan Menu Utama
+- [ ] **Yudhistira:**  1.3 Pattern Recognition, 1.4 Abstraction, Transaksi Kasir 
 
 ### Progress 3 — 30 Nov 2026
 - [ ] **Alghi:** Fitur Create + validasi.
