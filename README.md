@@ -81,7 +81,7 @@ Pengembangan project dilakukan melalui beberapa tahapan:
 ### Progress 2 — 27 Nov 2026
 - [ ] **Alghi:** Struktur data, fondasi materi UTS, kerangka menu, 1.5 menu utama, feature/validasi-v2, 3.1 Pemetaan Pemenuhan Ketentuan Project.
 - [ ] **Najwan:** 2.1 Flowchart Alur Menu Utama, 2.2 Keterangan Alur Flowchart, Fondasi Dan Menu Utama
-- [ ] **Yudhistira:**  1.3 Pattern Recognition, 1.4 Abstraction, Transaksi Kasir, 3.2 Screenshot Hasil Pengujian Program. 
+- [ ] **Yudhistira:**  1.3 Pattern Recognition, 1.4 Abstraction, Transaksi Kasir, 3.3 Screenshot Hasil Pengujian Program. 
 
 ### Progress 3 — 30 Nov 2026
 - [ ] **Alghi:** Fitur Create + validasi.
